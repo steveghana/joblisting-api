@@ -56,7 +56,7 @@ export class CreateApplicationDto {
   @IsNotEmpty({
     message: 'Resume is required',
   })
-  file: Express.Multer.File;
+  file: any /* Express.Multer.File */;
 
   status: IStatusApplication;
 }

@@ -36,7 +36,7 @@ export class ApplicationsController {
   @UseFilters(new HttpExceptionFilter())
   @UseInterceptors(FileInterceptor('file'))
   async create(
-    @UploadedFile() file: Express.Multer.File,
+    @UploadedFile() file: any /* Express.Multer.File */,
     @Body() application: CreateApplicationDto,
     @Res() res: Response,
   ) {

@@ -80,7 +80,7 @@ export class ApplicationsService {
     });
   }
 
-  private async uploadFile(file: Express.Multer.File) {
+  private async uploadFile(file: any /* Express.Multer.File */) {
     // TODO: Enable google cloud storage api to use this feature
     //   const fileId = uuidv4();
     //   const fileName = `${fileId}-${file.originalname}`;
