@@ -7,7 +7,7 @@ import { TypeOrmLogger } from '../util/lg';
 export default registerAs('database', () => ({
   type: 'postgres',
   logging: true,
-  url: process.env.DB_DATABASE_URL,
+  url: process.env.DATABASE_URL,
   // host: process.env.DB_HOST || 'localhost',
   // port: process.env.DB_PORT || 5432,
   // username: process.env.DB_USERNAME || 'postgres',
