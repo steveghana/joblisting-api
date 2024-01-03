@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    environment:
+      DATABASE_URL: postgres://user:password@localhost:5432/dev
+      NODE_ENV: development
+      PORT: 3000
+    ports:
+      - '8080:3000'

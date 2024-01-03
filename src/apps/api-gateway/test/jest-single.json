@@ -1,0 +1,11 @@
+{
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": "../../../../src/apps",
+  "testEnvironment": "node",
+  "testMatch": [
+    "**/clients/controllers/clients.controller.spec.ts"
+  ],
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  }
+}
