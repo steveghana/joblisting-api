@@ -19,9 +19,9 @@ export default registerAs('database', () => ({
     charset: 'utf8mb4_unicode_ci',
   },
 
-  ssl: {
-    rejectUnauthorized: false,
-  }, // enable SSL/TLS
+  // ssl: {
+  //   rejectUnauthorized: false,
+  // }, // enable SSL/TLS
   dateStrings: true,
   logger: new TypeOrmLogger(),
 
