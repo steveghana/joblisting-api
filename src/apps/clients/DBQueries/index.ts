@@ -41,7 +41,7 @@ export const getAllClients = async (
 
 export function findElseCreateClient(
   email: string,
-  clientInfo: IClient & { communicationPreferences: string },
+  clientInfo: IClient & { communicationPreferences?: string },
   transactionParam: EntityManager = null,
   dependencies: Dependencies = null,
 ): Promise<[Client, boolean]> {
