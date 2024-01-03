@@ -1,0 +1,6 @@
+services:
+- type: web
+  name: api
+  env: node
+  buildCommand: npm install && npm run build
+  startCommand: npm run start:prod
