@@ -11,7 +11,7 @@ import { createRoleLink } from '../Shorturl/service/util';
 export async function generateAndPersistData() {
   return useTransaction(async (transaction) => {
     // generate client data
-    const clients = Array.from({ length: 11 }, generateClientData);
+    const clients = Array.from({ length: 18 }, generateClientData);
     const savedClients = [];
     for (const client of clients) {
       const [savedClient, created] = await findElseCreateClient(
@@ -50,7 +50,7 @@ export async function generateAndPersistData() {
       console.log(jobs, 'jobs map .......................');
       if (jobs) {
         const applications = Array.from(
-          { length: 2 },
+          { length: 1 },
           () => generateApplicantData(jobs), // Use the first job associated with the role
         );
         for (const application of applications) {
