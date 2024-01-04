@@ -13,6 +13,9 @@ export const dbConnetion: PostgresConnectionOptions = {
   username: process.env.DB_USERNAME || 'postgres',
   password: process.env.DB_PASSWORD || 'password',
   logger: new TypeOrmLogger(),
+  ssl: {
+    rejectUnauthorized: false,
+  },
   entities: [...Entities],
   synchronize: process.env.NODE_ENV === 'development',
 };

@@ -15,7 +15,7 @@ import { createDocument } from './swagger/swagger';
 import * as winston from 'winston';
 import { Logger, ValidationPipe, Next } from '@nestjs/common';
 import { HttpExceptionFilter } from '../../middleware/err.Middleware';
-import { generateAndPersistData } from '../Faker';
+import { generateFakeDataAndPersist } from '../Faker';
 export function getPort(): number {
   // If port is omitted or is 0, the operating system will assign an arbitrary unused port
   return process.env.NODE_ENV === 'test'
@@ -70,7 +70,7 @@ export async function init() {
     logger.log('api', `Now listening on port ${getPort()}`);
   });
   logger.log('api', `Now listening on port faker`);
-  // generateAndPersistData();
+  // generateFakeDataAndPersist();
 
   process.on('SIGINT', async () => {
     logger.log('api', 'Shutting down gracefully...');

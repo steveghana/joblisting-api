@@ -8,7 +8,7 @@ import { generateApplicantData } from './applicants.fake';
 import { createApplication } from '../applications/DBQueries';
 import { createRoleLink } from '../Shorturl/service/util';
 
-export async function generateAndPersistData() {
+export async function generateFakeDataAndPersist() {
   return useTransaction(async (transaction) => {
     // generate client data
     const clients = Array.from({ length: 18 }, generateClientData);
